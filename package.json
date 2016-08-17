@@ -5,6 +5,15 @@
   "scripts": {
     "start": "node ./bin/www"
   },
+  "main": "app.js",
+  "author": {
+    "name": "joelgarzatx",
+    "email": "joel.garza@gmail.com"
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
   "dependencies": {
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
