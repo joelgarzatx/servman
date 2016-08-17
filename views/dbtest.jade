@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  h1 TestDB
+  ul
+    each val, index in tests
+      li #{val.field}
