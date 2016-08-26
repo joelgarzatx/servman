@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Parts
+  table.table.table-striped
+    thead
+      tr
+        th Group
+        th Code
+        th Description
+        th Price
+    tbody
+      each part in parts
+        tr
+          td= part.partgroup
+          td= part.partcode
+          td= part.partdescription
+          td= part.partprice

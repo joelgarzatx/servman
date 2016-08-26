@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Services
+  table.table.table-striped
+    thead
+      tr
+        th Code
+        th Description
+        th Time
+        th Note
+    tbody
+      each service in services
+        tr
+          td= service.servicecode
+          td= service.servicedescription
+          td= service.servicetime
+          td= service.servicenote

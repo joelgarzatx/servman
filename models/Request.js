@@ -3,9 +3,10 @@ var Schema = mongoose.Schema;
 
 var requestSchema = new Schema({
   date_created: { type: Date, default: Date.now },
-  _location_id: { type: Schema.Types.ObjectId, required: true },
+  sitename: { type: String, required: true },
+  requestdescription: { type: String },
   closed: { type: Boolean, default: false },
-  status: { type: String },
+  status: { type: String, defaul: open },
   priority: { type: String },
 });
 

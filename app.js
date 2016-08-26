@@ -10,6 +10,10 @@ var routes = require('./routes/index');
 var user = require('./routes/user');
 var dbtest = require('./routes/dbtest');
 var callback = require('./routes/callback');
+var service = require('./routes/service');
+var part = require('./routes/part');
+var site = require('./routes/site');
+var request = require('./routes/request');
 
 var app = express();
 
@@ -72,6 +76,10 @@ app.use('/', routes);
 app.use('/user', user);
 app.use('/dbtest', dbtest);
 app.use('/callback', callback);
+app.use('/service', service);
+app.use('/part', part);
+app.use('/site', site);
+app.use('/request', request);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  h1 Sites
+  table.table.table-striped
+    thead
+      tr
+        th Site
+        th Number
+        th Description
+        th Address
+        th Serviced
+        th Type
+        th Serial
+    tbody
+      each site in sites
+        tr
+          td= site.sitename
+          td= site.sitenumber
+          td= site.sitedescription
+          td= site.address
+          td= site.Serviced
+          td= site.unittype
+          td= site.unitserial

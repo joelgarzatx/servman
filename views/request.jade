@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1 Requests
+  a.btn.btn-primary(href="/request/create") Create a new request
+  table.table.table-striped
+    thead
+      tr
+        th Date
+        th Site
+        th Description
+        th Status
+    tbody
+      each request in requests
+        tr
+          td= request.date_created
+          td= request.sitename
+          td= request.requestdescription
+          td= request.status
