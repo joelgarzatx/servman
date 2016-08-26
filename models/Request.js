@@ -6,7 +6,7 @@ var requestSchema = new Schema({
   sitename: { type: String, required: true },
   requestdescription: { type: String },
   closed: { type: Boolean, default: false },
-  status: { type: String, defaul: open },
+  status: { type: String, default: open },
   priority: { type: String },
 });
 
