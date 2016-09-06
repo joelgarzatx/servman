@@ -14,6 +14,7 @@ var service = require('./routes/service');
 var part = require('./routes/part');
 var site = require('./routes/site');
 var request = require('./routes/request');
+var auth = require('./routes/auth');
 
 var app = express();
 
@@ -46,7 +47,8 @@ mongoose.connect(connection_string);
 var passport = require('passport');
 
 // This will configure Passport to use Auth0
-var strategy = require('./setup-passport');
+// var strategy = require('./setup-passport');
+require("./passport-init");
 
 // Session and cookies middlewares to keep user logged in
 var cookieParser = require('cookie-parser');
@@ -63,8 +65,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('node_modules/bootstrap/dist'));
 
-app.use(cookieParser());
 // See express session docs for information on the options: https://github.com/expressjs/session
 app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false }));
 
@@ -80,6 +82,7 @@ app.use('/service', service);
 app.use('/part', part);
 app.use('/site', site);
 app.use('/request', request);
+app.use(auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,6 @@
+# color palette
+pink fd6c5e
+blue 4271b8
+purple 7f0f7e
+graydk 333333
+graymd 555555
